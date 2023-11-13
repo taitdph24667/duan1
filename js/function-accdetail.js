@@ -1,0 +1,1 @@
+$(function(){$("#img-gal").lightSlider({gallery:!0,item:1,thumbItem:5,speed:500,auto:!0,loop:!0,onSliderLoad:function(){$("#img-gal").removeClass("sl-hidden")}})});

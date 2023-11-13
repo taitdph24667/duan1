@@ -1,0 +1,21 @@
+{
+  "short_name": "Rút Xu",
+  "name": "Rút Xu - ShopNick.vn",
+  "icons": [
+    {
+      "src": "/img/icon72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "/img/icon192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "scope": "/ban-xu-tu-dong",
+  "start_url": "/ban-xu-tu-dong",
+  "background_color": "#BA6827",
+  "display": "standalone",
+  "theme_color": "#BA6827"
+}

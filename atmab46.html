@@ -1,0 +1,194 @@
+<style>
+    .table {
+        border: 0;
+        background-color: #FFF;
+        margin-bottom: 0
+    }
+
+    .table>tbody>tr>th,
+    .table>tbody>tr>td {
+        border-bottom: 0
+    }
+
+    /*.nav-tabs{border-bottom:0}*/
+    a {
+        color: #337ab7;
+        text-decoration: none
+    }
+
+    .nav:after,
+    .nav:before,
+    .ttvnd {
+        width: 50%;
+        text-align: center;
+        font-weight: bold;
+        background-color: #f5f5f5
+    }
+
+    .nav>li.ttvnd.active>a {
+        background-color: #58d4e2;
+        color: #FFF
+    }
+
+    .table>tbody>tr>th {
+        border-top: 0;
+        text-align: left
+    }
+
+    button {
+        outline: 0;
+        padding: 0;
+        color: #757575;
+        background-color: #F0F0F0;
+        font-size: 14px;
+        border: 1px solid transparent;
+        border-radius: 4px
+    }
+
+    button>i {
+        display: block;
+        padding: 4px
+    }
+
+    button>i:active {
+        transform: translate(1px)
+    }
+
+    .qr {
+        margin: auto;
+        text-align: center
+    }
+</style>
+<div class="modal fade" id="Modal_ATM" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><b>Mua xu từ Ngân hàng - Ví điện tử</b></h4>
+            </div>
+            <div class="modal-body" style="min-height:515px">
+                <div class="col-sm-6">
+                    <ul class="nav nav-tabs row">
+                        <li class="ttvnd active"><a href="#tab-atm" data-toggle="tab">Ngân hàng</a></li>
+                        <li class="ttvnd"><a href="#tab-vdt" data-toggle="tab" style="margin:0">Ví điện tử</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div id="tab-atm" class="tab-pane active p-t-10" style="margin-left:-10px;margin-right:-10px;padding-bottom:10px">
+                            <table class="table table-striped-2">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2" style="border-bottom:2px solid #e7ecf1">Thông tin tài khoản ngân hàng</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Chủ&nbsp;tài&nbsp;khoản</th>
+                                        <th>DANG BAC TIEN</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Techcombank</th>
+                                        <th>3334567888 <button title="Copy" onclick="copy('3334567888')"><i class="fas fa-clone"></i></button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Vietcombank</th>
+                                        <th>9977343779 <button title="Copy" onclick="copy('9977343779')"><i class="fas fa-clone"></i></button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Phương Đông (OCB)</th>
+                                        <th>22000 <button title="Copy" onclick="copy('22000')"><i class="fas fa-clone"></i></button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Vietinbank</th>
+                                        <th>Tien99</th>
+                                    </tr>
+                                    <tr>
+                                        <th>TPBank</th>
+                                        <th>Tien7979</th>
+                                    </tr>
+                                    <!--<tr>-->
+                                    <!--    <th>MBbank</th>-->
+                                    <!--    <th style="white-space:nowrap">9704229263652815 <button title="Copy" onclick="copy('9704229263652815')"><i class="fas fa-clone"></i></button></th>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                    <!--    <th>BIDV</th>-->
+                                    <!--    <th>Tien99</th>-->
+                                    <!--</tr>-->
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab-vdt" class="tab-pane p-t-10" style="margin-left:-10px;margin-right:-10px">
+                            <!--<div class="col-sm-6 qr">-->
+                            <!--    <h4><b>Quét mã QR hoặc chuyển qua TK</b></h4>-->
+                            <!--    <img src="/img/mm.png">-->
+                            <!--</div>-->
+                            <!--<div class="col-sm-6">-->
+                            <table class="table table-striped-2">
+                                <tbody>
+                                    <tr>
+                                        <th colspan="2" style="border-bottom:2px solid #e7ecf1">Thông tin tài khoản ví điện tử</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Chủ&nbsp;tài&nbsp;khoản</th>
+                                        <th>ĐẶNG BÁC TIẾN</th>
+                                    </tr>
+                                    <tr>
+                                        <!--<th width="50%">MoMo <small>(Nếu chậm thì thông báo <a href="/thong-bao-nap-tien"><b>Tại&nbsp;Đây</b></a>)</small></th>-->
+                                        <th><a href="https://me.momo.vn/tien99" target="_blank">MoMo</a></th>
+                                        <th>0977343779 <button title="Copy" onclick="copy('0977343779')"><i class="fas fa-clone"></i></button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>ViettelPay</th>
+                                        <th>0977343779 <button title="Copy" onclick="copy('0977343779')"><i class="fas fa-clone"></i></button></th>
+                                    </tr>
+                                    <tr>
+                                        <th>VTMONEY</th>
+                                        <th>0977343779 <button title="Copy" onclick="copy('0977343779')"><i class="fas fa-clone"></i></button></th>
+                                    </tr>
+                                    <!--<tr>-->
+                                    <!--	<th>Tsr <small>(thesieure.com) (Thông báo <a href="/thong-bao-nap-tien"><b>Tại Đây</b></a>)</small></th>-->
+                                    <!--</tr>-->
+                                    <!--<tr>-->
+                                    <!--	<th style="border-top:2px solid #e7ecf1">Tất cả đều có chung tài khoản là 0977343779 <button title="Copy" onclick="copy('0977343779')"><i class="fas fa-clone"></i></button></th>-->
+                                    <!--</tr>-->
+                                </tbody>
+                            </table>
+                            <div style="padding:9px;margin-bottom:0">
+                                <p>Liên hệ <a href="https://zalo.me/0977343779" target="_blank">CSKH</a> nếu bạn dùng ví khác</p>
+                                <p style="color:#f00">Nếu chuyển momo dưới 6.000đ thì quét mã QR mới được cộng tự động</p>
+                            </div>
+                            <!--</div>-->
+                        </div>
+                        <!--<div style="padding:9px;display:grid">-->
+                                                <p>Sẽ được nhận trong 30s<br></p>
+                        <p>Chuyển MoMo, OCB, Techcombank sẽ được cộng nhanh nhất<br></p>
+                        <!--</div>-->
+                    </div>
+                </div>
+                <div class="col-sm-6" style="min-height:400px">
+                    <div class="qr" style="width:270px;display:table-cell">
+                        <h4><b>Chuyển khoản hoặc quét mã QR</b></h4>
+                        <img src="img/Nap-TCB.png" style="max-width:100%">                    </div>
+                </div>
+                <div style="text-align: right">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function copy(a) {
+        let b = document.createElement('INPUT');
+        b.setAttribute('value', a)
+        navigator.clipboard.writeText(b.value);
+    }
+    $('#Modal_ATM').modal('show')
+
+    function down(a) {
+        var img = document.querySelector('#img' + a);
+        var link = document.createElement('a');
+        link.href = `data:image/png;base64,${encodeURIComponent(img.src.replace(/^data:image\/\w+;base64,/, ''))}`;
+        link.download = 'Nap.html';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+</script>
