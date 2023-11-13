@@ -33,4 +33,5 @@ function update_accgame($id,$iddm,$tenacc,$giaacc,$mota,$hinh,$matkhau){
    
     pdo_execute($sql);
 }
+
 ?>

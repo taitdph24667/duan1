@@ -1,12 +1,19 @@
 </div>		<div class="info-acc">
+	<?php 
+	       
+		extract($onesp); 
+		$hinh =  "upload/".$img;
+	// var_dump($onesp);
+	?>
+	
 			<div class="header-acc">
 				<div class="col-md-6">
-					<p class="red">Ninja School</p>
-					<p>Mã Số 13720</p>
+					<p class="red">Mã Số <?php echo $id?></p>
+					<p class="red"> <?php echo $name?></p>
 				</div>
 				<div class="col-md-6">
 					<div class="amount-acc">
-						330.000 ATM<br>420.000 Card<br>38.280.000 Xu					</div>
+										</div>
 				</div>
 				<div class="col-md-6">
 					
@@ -17,12 +24,14 @@
 			</div>
 			<div class="col-md-6">
 				<div class="acc-images">
-					<center>
-						<div class="clearfix" style="max-width:320px">
-							<ul id="img-gal" class="gallery list-unstyled sl-hidden">
-								<li data-thumb="../img-acc/ninja-school/13720/1.png"><img src="../img-acc/ninja-school/13720/1.png"></li><li data-thumb="../img-acc/ninja-school/13720/2.png"><img src="../img-acc/ninja-school/13720/2.png"></li><li data-thumb="../img-acc/ninja-school/13720/3.png"><img src="../img-acc/ninja-school/13720/3.png"></li><li data-thumb="../img-acc/ninja-school/13720/4.png"><img src="../img-acc/ninja-school/13720/4.png"></li><li data-thumb="../img-acc/ninja-school/13720/5.png"><img src="../img-acc/ninja-school/13720/5.png"></li><li data-thumb="../img-acc/ninja-school/13720/6.png"><img src="../img-acc/ninja-school/13720/6.png"></li><li data-thumb="../img-acc/ninja-school/13720/7.png"><img src="../img-acc/ninja-school/13720/7.png"></li><li data-thumb="../img-acc/ninja-school/13720/8.png"><img src="../img-acc/ninja-school/13720/8.png"></li><li data-thumb="../img-acc/ninja-school/13720/9.png"><img src="../img-acc/ninja-school/13720/9.png"></li><li data-thumb="../img-acc/ninja-school/13720/10.png"><img src="../img-acc/ninja-school/13720/10.png"></li><li data-thumb="../img-acc/ninja-school/13720/11.png"><img src="../img-acc/ninja-school/13720/11.png"></li>							</ul>
-						</div>
-					</center>
+				<center>
+                        <div class="clearfix" style="max-width:320px">
+                            <ul id="img-gal" class="gallery list-unstyled sl-hidden">
+							
+								<img src="<?php echo $hinh?>" alt="Ảnh" width="320" height="240">
+                            </ul>
+                        </div>
+                    </center>
 				</div>
 			</div>
 			<div class="col-md-6 tt-info-acc">
@@ -39,8 +48,8 @@
 				<div class="hr-acc"><i class="icon-dot"></i></div>
 				<div class="tt-acc-full">
 					<div class="con">
-						Thông tin thêm: <span class="red" style="text-transform:none">vk12(9x) đồ4,12,13 (3đồ tl) (4đồ mcs), 96m yên, max sách, siêu xe 5 sao vip lv100(full tb) ig taochymbee</span>
-						<div style="padding-top:10px">Giá cũ: <s>350.000</s> ATM</div>					</div>
+						Thông tin thêm: <span class="red" style="text-transform:none"><?php echo $mota?></span>
+						<div style="padding-top:10px"><h2>Giá:<span class="red"><?php echo $price?> đ</div>	</div></span> </h2> 
 				</div>
 				<div class="visible-xs">
 					<div class="col-xs-6"><b>Trạng thái:</b> <i class="red">Chưa&nbsp;bán</i></div>
@@ -93,32 +102,59 @@
 				<h3 class="list-game" style="margin-top:100px">NICK LIÊN QUAN</h3>
 				<div class="line-center"></div>
 				<div class="acc-list acc-list-6">
-					<div class="col-acc">
-						<div class="acc">
-							<div class="imgae">
-								<a href="13777.html">
-									<img class="img" src="../img-acc/ninja-school/13777/1.png"/>
-									<span class="detail">Chi tiết</span>
-									<span class="price">350.000đ</span>
-									<span class="acc-id">#13777</span>
-								</a>
-							</div>
-							<div class="col-xs-4">
-								<div>Class</div>
-								<div><b>Đao</b></div>
-							</div>
-							<div class="col-xs-4">
-								<div>Server</div>
-								<div><b>Tone</b></div>
-							</div>
-							<div class="col-xs-4">
-								<div>Level</div>
-								<div><b>90</b></div>
-							</div>
-							<div class="clear"></div>
-							<div class="info">vk12(9x mcs) đồ11,12 (4đồ tl) ...</div>
-						</div>
-					</div>
+				
+					<?php
+               
+			   $i=0;
+			   foreach($listaccgame as $accgame){
+				   extract($accgame);
+			 
+				   $hinh =  "upload/".$img;
+				 
+				   $linksp="index.php?act=sanphamct&idsp=".$id;
+				   
+				   if(($i==2)||($i==5)||($i==8)){
+					   $mr="";
+				   }else{
+					   $mr="mr";
+				   }
+				   echo '
+				   <div class="col-acc">
+					   <div class="acc">
+						   <div class="imgae">
+							   <a href="'. $linksp .'">
+								   <img class="img" src="'.$hinh.'" />
+								   <span class="detail">Chi tiết</span>
+								   <span class="price">'.$price.'$</span>
+								   <span class="acc-id">#'.$id.'</span>
+								   <div class="sale">-6%</div>
+								   <div class="bg1">Thú 5✰</div>
+								   <div class="bg1 up">Free up</div>
+							   </a>
+						   </div>
+						   <div class="col-xs-4">
+							   <div>Tên</div>
+							   <div><b>'.$name.'</b></div>
+						   </div>
+						   <div class="col-xs-4">
+							   <div>Danh Mục</div>
+							   <div><b>'.$namedm.'</b></div>
+						   </div>
+						   <div class="col-xs-4">
+							   <div>Level</div>
+							   <div><b>93</b></div>
+						   </div>
+						   <div class="clear"></div>
+						   <div class="info-nso" title="'.$mota.'">'.$mota.'</div>
+					   </div>
+				   </div>
+   
+   
+				';   
+				$i+=1;
+		   }
+	   ?>
+   </div>
 
 					</div></div>		<div class="modal fade" id="myModal" role="dialog">
 			<div class="modal-dialog">

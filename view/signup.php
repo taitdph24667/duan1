@@ -11,8 +11,12 @@
         </div>
         <div id="sign-in-button"></div>
         <div class="field">
-          <input type="number" id="code" name="code" required>
+          <input type="text" id="code" name="code" required>
           <label>Mật khẩu</label>
+        </div>
+        <div class="field">
+          <input type="text" id="code" name="code" required>
+          <label>Gmail</label>
         </div>
         <div class="content">
           <div class="checkbox">

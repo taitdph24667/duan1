@@ -9,7 +9,7 @@ function delete_accgame($id){
     pdo_execute($sql);
 }
 function loadAll_accgame($kyw="",$iddm=0){
-    $sql = "select * from accgame where 1";
+    $sql = "select a.id as id,a.name as name,a.price as price,a.img as img,a.mota as mota,a.luotxem as luotxem ,a.iddm as iddm,a.matkhau as matkhau,d.name as namedm from accgame as a join danhmuc as d on d.id=a.iddm where 1";
     if ($kyw!="") {
         $sql.=" and name like '%".$kyw."%'";
     }
@@ -33,4 +33,5 @@ function update_accgame($id,$iddm,$tenacc,$giaacc,$mota,$hinh,$matkhau){
    
     pdo_execute($sql);
 }
+
 ?>

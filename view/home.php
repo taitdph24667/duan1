@@ -63,7 +63,7 @@
                 <div class="col-acc">
                     <div class="acc">
                         <div class="imgae">
-                            <a href="ninja-school/13720.html">
+                            <a href="'. $linksp .'">
                                 <img class="img" src="'.$hinh.'" />
                                 <span class="detail">Chi tiết</span>
                                 <span class="price">'.$price.'$</span>

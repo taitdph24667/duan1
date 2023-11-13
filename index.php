@@ -6,9 +6,9 @@ include "view/header.php";
 include "quantri/model/pdo.php";
 
 include "model/danhmuc.php";
-include "quantri/model/accgame.php";
-include "quantri/model/taikhoan.php";
-include "quantri/model/napthe.php";
+include "model/accgame.php";
+include "model/taikhoan.php";
+include "model/napthe.php";
 
 
 if(isset($_GET['act'])&&($_GET['act']!="")){
@@ -21,9 +21,25 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
 
           $listaccgame= loadAll_accgame('',$locdm);
       $listdanhmuc=loadall_danhmuc();
-
+    
 
             include "view/home.php";
+     
+        break;
+
+        case "sanphamct":
+            if(isset($_GET['idsp'])&&($_GET['idsp']>0)){
+              $id=$_GET['idsp'];
+                 $onesp=loadone_accgame($id);
+                 $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
+                 $listaccgame= loadAll_accgame('',$locdm);
+                 $listdanhmuc=loadall_danhmuc();
+           
+            include "view/chitietacc.php";
+            }else{
+                include "view/home.php";
+            }
+         
      
         break;
 
