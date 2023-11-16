@@ -11,6 +11,7 @@ include "model/taikhoan.php";
 include "model/napthe.php";
 
 //  đã thay đổi
+// test part 2
 
 if(isset($_GET['act'])&&($_GET['act']!="")){
     $act=$_GET['act'];
