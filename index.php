@@ -10,8 +10,8 @@ include "model/accgame.php";
 include "model/taikhoan.php";
 include "model/napthe.php";
 
-// đã chỉnh
-//test pass 2
+//  đã thay đổi
+
 if(isset($_GET['act'])&&($_GET['act']!="")){
     $act=$_GET['act'];
     switch($act){
