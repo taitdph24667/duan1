@@ -10,6 +10,7 @@ include "model/accgame.php";
 include "model/taikhoan.php";
 include "model/napthe.php";
 
+// đã chỉnh
 
 if(isset($_GET['act'])&&($_GET['act']!="")){
     $act=$_GET['act'];
