@@ -27,7 +27,7 @@
                         <td>'.$user.'</td>
                         <td>'.$pass.'</td>
                         <td>'.$email.'</td>
-                        <td>'.$money.'</td>
+                        <td>'.number_format($money,0,"",".").' VND</td>
                         <td>'.$role.'</td>
                         <td><a href="'.$suakh.'"><input type="button" value="Sửa"></a> <a href= "'.$xoakh.'"><input type="button" value="Xóa"></a></td>
                      </tr>';

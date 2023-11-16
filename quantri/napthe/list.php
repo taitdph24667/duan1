@@ -24,20 +24,36 @@
             <?php
              foreach ($listnapthe as $napthe) {
                 extract($napthe);
-                $duyetthe="index.php?act=napthe&id=".$id;
-                $khongduyet="index.php?act=napthe&id=".$id;
+                $duyetthe="index.php?act=reload&id=".$idtk."&duyet=$id";
+                $khongduyet="index.php?act=reload&khongduyet=$id";
+                $status="";
+                
+if($trangthai==0){
+  $status='<a onClick="return (window.location.reload());" href="'.$duyetthe.'"><input type="button" value="duyệt"></a> 
+  <a onClick="window.location.reload();" href= "'.$khongduyet.'"><input type="button" value="Không duyệt"></a>';
+}else if($trangthai==1){
+  $status= 'đã duyệt';
+  
+}else{
+  $status= 'đã từ chối';
+}
+
+
+
+
+              
                 echo '<tr>
                         <td><input type="checkbox" name="" id=""></td>
                         <td>'.$id.'</td>
                         <td>Garena</td>
-                        <td>'.$menhgia.'</td>
+                        <td>'.number_format($menhgia,0,"",".").' VND</td>
                         <td>'.$seri.'</td>
                         <td>'.$mathe.'</td>
                         <td>'.$ngaynap.'</td>
                         <td>'.$idtk.'</td>
-                        <td>
-                        <a href="'.$duyetthe.'"><input type="button" value="Duyệt"></a> 
-                        <a href= "'.$khongduyet.'"><input type="button" value="Không duyệt"></a></td>
+                        <td>'.$status.'</td>
+                       
+
                      </tr>';
              }
             ?>

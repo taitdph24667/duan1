@@ -1,4 +1,5 @@
 <?php
+ob_start();
     include "../quantri/model/pdo.php";
     include "header.php";
     include "model/danhmuc.php";
@@ -127,8 +128,20 @@
 
                 case 'napthe':
                    $listnapthe=loadall_thenap();
+                  
+                  
                     include "../quantri/napthe/list.php";
+                    // header("Refresh:0");
                     break;
+case "reload":
+    if(isset($_GET["duyet"])&& !empty($_GET["duyet"])){
+        duyetthenap($_GET["id"],$_GET["duyet"]);
+       }
+       if(isset($_GET["khongduyet"])&& !empty($_GET["khongduyet"])){
+        khongduyetthenap($_GET["khongduyet"]);
+       }
+header("location:index.php?act=napthe");
+    break;
 
 
         }

@@ -66,7 +66,7 @@
                             <a href="'. $linksp .'">
                                 <img class="img" src="'.$hinh.'" />
                                 <span class="detail">Chi tiết</span>
-                                <span class="price">'.$price.'$</span>
+                                <span class="price">'.number_format($price,0,"",".").'VND</span>
                                 <span class="acc-id">#'.$id.'</span>
                                 <div class="sale">-6%</div>
                                 <div class="bg1">Thú 5✰</div>
