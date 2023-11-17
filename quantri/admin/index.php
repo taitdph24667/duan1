@@ -118,6 +118,37 @@ ob_start();
         $listaccgame= loadall_accgame();
         include "accgame/list.php";
         break;
+        // khach hang
+            case 'xoatk':
+             if (isset($_GET['id'])&&($_GET['id']>0)) {
+                delete_taikhoan($_GET['id']);
+                }
+                $listtaikhoan= loadall_taikhoan();
+                include "taikhoan/list.php";
+            break;
+            case 'suatk':
+                if (isset($_GET['id'])&&($_GET['id']>0)) {
+                    $taikhoan=loadone_taikhoan($_GET['id']);
+                }
+                $listtaikhoan=loadall_taikhoan();
+                include "taikhoan/update.php";
+                break;
+            case 'updatetk':
+                    if(isset($_POST['capnhattk'])&&($_POST['capnhattk'])){
+                        $id=$_POST['id'];
+                        $user= $_POST['user'];
+                        $pass= $_POST['pass'];
+                        $email=$_POST['email'];
+                        $money= $_POST['money'];
+                        $role= $_POST['role'];
+                        // var_dump($money);
+                        // die;
+                update_taikhoan($id,$user,$pass,$email,$money,$role);
+                $thongbao="Cập nhật thành công";
+            }
+            $listtaikhoan= loadall_taikhoan();
+            include "taikhoan/list.php";
+            break;
             case 'dskh':
                 $listtaikhoan= loadall_taikhoan();
                 include "taikhoan/list.php";

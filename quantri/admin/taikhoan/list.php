@@ -19,8 +19,8 @@
             <?php
              foreach ($listtaikhoan as $taikhoan) {
                 extract($taikhoan);
-                $suakh="index.php?act=suakh&id=".$id;
-                $xoakh="index.php?act=xoakh&id=".$id;
+                $suatk="index.php?act=suatk&id=".$id;
+                $xoatk="index.php?act=xoatk&id=".$id;
                 echo '<tr>
                         <td><input type="checkbox" name="" id=""></td>
                         <td>'.$id.'</td>
@@ -29,7 +29,7 @@
                         <td>'.$email.'</td>
                         <td>'.number_format($money,0,"",".").' VND</td>
                         <td>'.$role.'</td>
-                        <td><a href="'.$suakh.'"><input type="button" value="Sửa"></a> <a href= "'.$xoakh.'"><input type="button" value="Xóa"></a></td>
+                        <td><a href="'.$suatk.'"><input type="button" value="Sửa"></a> <a href= "'.$xoatk.'"><input type="button" value="Xóa"></a></td>
                      </tr>';
              }
             ?>
@@ -38,7 +38,7 @@
            <div class="row mb10 ">
          <input class="mr20" type="button" value="CHỌN TẤT CẢ">
          <input  class="mr20" type="button" value="BỎ CHỌN TẤT CẢ">
-         <a href="index.php?act=adddm"> <input  class="mr20" type="button" value="NHẬP THÊM"></a>
+         <a href="index.php?act=addtk"> <input  class="mr20" type="button" value="NHẬP THÊM"></a>
            </div>
           </form>
          </div>
