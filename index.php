@@ -60,6 +60,7 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
             case "dangnhap":
           
                 include "view/login.php";
+                
          
             break;
 

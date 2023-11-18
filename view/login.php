@@ -7,12 +7,12 @@
         <div id="content"></div>
         <div class="field">
           <input type="number" id="phone" name="phone" required>
-          <label>Số điện thoại</label>
+          <label>Tài Khoản</label>
         </div>
         <div id="sign-in-button"></div>
         <div class="field">
           <input type="number" id="code" name="code" required>
-          <label>Mã xác thực</label>
+          <label>Mật khẩu</label>
         </div>
         <div class="content">
           <div class="checkbox">

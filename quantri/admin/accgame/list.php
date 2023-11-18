@@ -21,6 +21,8 @@
                 <th></th>
                 <th>MÃ ACC GAME</th>
                 <th>TÊN ACC GAME</th>
+                <th>LV</th>
+                <th>CLASS</th>
                 <th>GIÁ</th>
                 <th>HÌNH</th>
                 <th>LƯỢT XEM</th>
@@ -43,6 +45,8 @@
                    <td><input type="checkbox" name="" id=""></td>
                    <td>'.$id.'</td>
                    <td>'.$name.'</td>
+                   <td>'.$lv.'</td>
+                   <td>'.$class.'</td>
                    <td>'.$price.'</td>
                    <td>'.$hinh.'</td>
                    <td>'.$luotxem.'</td>
