@@ -21,6 +21,14 @@
             <input type="text" name="tenacc" >
            </div>
            <div class="row2 mb10">
+            LV<br>
+            <input type="text" name="lv" >
+           </div>
+           <div class="row2 mb10">
+           CLASS<br>
+            <input type="text" name="class" >
+           </div>
+           <div class="row2 mb10">
             Giá <br>
             <input type="text" name="giaacc" >
            </div>

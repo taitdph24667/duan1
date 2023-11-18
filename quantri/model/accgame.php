@@ -1,5 +1,5 @@
 <?php
-function insert_accgame($id,$iddm,$tenacc,$giaacc,$mota,$lv,$class,$hinh,$matkhau){
+function insert_accgame($tenacc,$giaacc,$hinh,$mota,$lv,$class,$iddm,$matkhau,){
     $sql= "insert into accgame(name,price,img,mota,lv,class,iddm,matkhau) values('$tenacc','$giaacc','$hinh','$mota','$lv','$class','$iddm','$matkhau')";
     pdo_execute($sql);
 
@@ -29,7 +29,7 @@ function update_accgame($id,$iddm,$tenacc,$giaacc,$mota,$lv,$class,$hinh,$matkha
     if ($hinh!="")
        $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',mota='".$mota."',lv='".$lv."',class='".$class."',img='".$hinh."',matkhau='".$matkhau."' where id=".$id;
     else
-       $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',mota='".$mota."' where id=".$id;
+       $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',mota='".$mota."',lv='".$lv."',class='".$class."',matkhau='".$matkhau."' where id=".$id;
    
     pdo_execute($sql);
 }

@@ -54,6 +54,8 @@ ob_start();
                     $iddm= $_POST['iddm'];
                     $tenacc= $_POST['tenacc'];
                     $giaacc= $_POST['giaacc'];
+                    $lv= $_POST['lv'];
+                    $class= $_POST['class'];
                     $mota= $_POST['mota'];
                     $hinh= $_FILES['hinh']['name'];
                     $matkhau= $_POST['password'];
@@ -62,7 +64,7 @@ ob_start();
             if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
             }else {
             }
-            insert_accgame($tenacc,$giaacc,$hinh,$mota,$iddm,$matkhau);
+            insert_accgame($tenacc,$giaacc,$hinh,$mota,$lv,$class,$iddm,$matkhau);
             $thongbao="Thêm thành công";
         }
     
@@ -103,6 +105,8 @@ ob_start();
                     $iddm= $_POST['iddm'];
                     $tenacc= $_POST['tenacc'];
                     $giaacc= $_POST['giaacc'];
+                    $lv= $_POST['lv'];
+                    $class= $_POST['class'];
                     $mota= $_POST['mota'];
                     $hinh= $_FILES['hinh']['name'];
                     $matkhau= $_POST['password'];
@@ -111,7 +115,7 @@ ob_start();
             if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
             }else {
             }
-            update_accgame($id,$iddm,$tenacc,$giaacc,$mota,$hinh,$matkhau);
+            update_accgame($id,$iddm,$tenacc,$giaacc,$lv,$class,$mota,$hinh,$matkhau);
             $thongbao="Cập nhật thành công";
         }
         $listdanhmuc= loadall_danhmuc();

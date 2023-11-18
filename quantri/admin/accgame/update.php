@@ -1,6 +1,7 @@
 <?php
    if (is_array($accgame)) {
     extract($accgame);
+
    }
    $hinhpath="../upload/".$img;
     if(is_file($hinhpath)){
@@ -21,9 +22,10 @@
             <?php
             foreach($listdanhmuc as $danhmuc){
               extract($danhmuc);
+             
               if($iddm==$id) $a="selected"; else $a="";
               echo '<option value="'.$id.'" '.$a.'>'.$name.'</option>';
-            }
+            } extract($accgame);
             ?>
             </select>
            </div>
@@ -34,6 +36,14 @@
            <div class="row2 mb10">
             Giá <br>
             <input type="text" name="giaacc" value="<?=$price?>">
+           </div>
+           <div class="row2 mb10">
+           LV<br>
+            <input type="text" name="lv" value="<?=$lv?>">
+           </div>
+           <div class="row2 mb10">
+            CLASS<br>
+            <input type="text" name="class" value="<?=$class?>">
            </div>
            <div class="row2 mb10">
             Ảnh <br>

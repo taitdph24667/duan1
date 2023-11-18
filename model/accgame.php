@@ -26,11 +26,11 @@ function loadone_accgame($id){
 $dm=pdo_query_one($sql);
 return $dm;
 }
-function update_accgame($id,$iddm,$tenacc,$giaacc,$mota,$hinh,$matkhau){
+function update_accgame($id,$iddm,$tenacc,$giaacc,$lv,$class,$mota,$hinh,$matkhau){
     if ($hinh!="")
-       $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',mota='".$mota."',img='".$hinh."',matkhau='".$matkhau."' where id=".$id;
+       $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',lv='".$lv."',class='".$class."',mota='".$mota."',img='".$hinh."',matkhau='".$matkhau."' where accgame.id=".$id;
     else
-       $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',mota='".$mota."' where id=".$id;
+       $sql= "update accgame set iddm='".$iddm."',name='".$tenacc."',price='".$giaacc."',lv='".$lv."',class='".$class."',mota='".$mota."',matkhau='".$matkhau."' where accgame.id id=".$id;
    
     pdo_execute($sql);
 }
