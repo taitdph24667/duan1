@@ -32,6 +32,7 @@
 
 <body>
     <header>
+        
         <nav class="navbar">
             <div class="container">
                 <a class="logo" href="index.php?act=trangchu"><img src="img/logo/logonew3.png"></a>
@@ -73,13 +74,30 @@
                                 <li><a href="index.php?act=hdnapthe">HƯỚNG DẪN NẠP THẺ</a></li>
                             </ul>
                         </li>
-
+                        <?php if (!$_SESSION) { ?>
                         <li>
                             <a href="index.php?act=dangnhap" class="c-btn btn c-btn-uppercase"><i class="fas fa-user-ninja"></i> ĐĂNG NHẬP</a>
                         </li>
                         <li>
                         	<a href="index.php?act=dangky" class="c-btn btn c-btn-uppercase"><i class="fas fa-key"></i> ĐĂNG KÝ</a>
                         </li>
+                        <?php } else { ?>
+                            <li>
+                            <a href="index.php?act=dangnhap" class="c-btn btn c-btn-uppercase"><i class="fas fa-user-ninja"></i> <?=$_SESSION['user']['user']?></a>
+                        </li>
+                        <li>
+                        	<a href="index.php?act=dangxuat" class="c-btn btn c-btn-uppercase"><i class="fas fa-key"></i> Đăng xuất</a>
+                        </li>
+             
+            <?php if( $_SESSION['user']['role'] ==1 ){ ?>
+                <li>
+                <a href="quantri/index.php" class="c-btn btn c-btn-uppercase"><i class="fas fa-key"></i> Đăng nhập admin</a>
+                </li>
+                <?php } ?>
+         
+</li>
+            </ul>
+        <?php } ?>
                     </ul>
                 </div>
             </div>

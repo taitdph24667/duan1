@@ -1,13 +1,9 @@
-
-<?php 
+<?php session_start();
 include "view/header.php";
-
-
 include "quantri/model/pdo.php";
-
+include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/accgame.php";
-include "model/taikhoan.php";
 include "model/napthe.php";
 
 //  đã thay đổi
@@ -57,12 +53,22 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
          
             break;
 
-            case "dangnhap":
-          
-                include "view/login.php";
+            case "dangnhap": 
+             include "view/login.php";
+                if (isset($_POST['dangnhap'])) {
+                    $loginMess = dangnhap($_POST['user'], $_POST['pass']);
+                      
+                    
+                }
+                break;
                 
+              
+                case "dangxuat":
+                    dangxuat();
+                    include "view/home.php";
+                    break;
          
-            break;
+          
 
             case "dangky":
           

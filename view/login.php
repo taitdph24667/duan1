@@ -2,16 +2,18 @@
 <link rel="stylesheet" href="account/style3.css">
 <div class="account-box">
     <div class="wrapper">
+      
       <div class="title">ĐĂNG NHẬP</div>
-      <form>
+      <form action="index.php?act=dangnhap" method="post">
+      <?php if (!$_SESSION) { ?>
         <div id="content"></div>
         <div class="field">
-          <input type="number" id="phone" name="phone" required>
+          <input type="text" id="" name="user" required>
           <label>Tài Khoản</label>
         </div>
         <div id="sign-in-button"></div>
         <div class="field">
-          <input type="number" id="code" name="code" required>
+          <input type="password" id="" name="pass" required>
           <label>Mật khẩu</label>
         </div>
         <div class="content">
@@ -23,7 +25,7 @@
         </div>
         <input type="hidden" id="confirm" name="confirm">
         <div class="field">
-          <input type="submit" id="submit" value="Đăng nhập">
+          <input type="submit" id="submit" value="Đăng nhập" name="dangnhap">
         </div>
         <div class="signin">----------- Hoặc -----------</div>
         <div class="signin">
@@ -33,6 +35,25 @@
             <div id="my-signin2"></div>
         </div>
       </form>
+      <?php if (isset($loginMess)&&$loginMess != '') {
+                echo $loginMess;
+            } ?> <?php } else { ?>
+            <h1>BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG</h1>
+              <p>Xin Chào <?=$_SESSION['user']['user']?></p>
+              <ul>                
+              <li><button><a href="index.php?act=trangchu">quay lại trang chủ</a></button>
+
+              <li><button><a href="index.php?act=edit_taikhoan">Cập nhập tài khoản</a></button>
+  
+              <?php if( $_SESSION['user']['role'] ==1 ){ ?>
+  
+              <li><button><a href="admin/index.php">Đăng nhập Admin</a></button>
+  
+                  <?php } ?>
+              <li><button><a href="index.php?act=dangxuat">Đăng xuất</a></button>
+  </li>
+              </ul>
+          <?php } ?>
     </div>
 </div>
 <script src="../www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>

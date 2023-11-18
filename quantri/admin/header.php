@@ -30,6 +30,7 @@
               <li><a href="index.php?act=dskh">Khách hàng</a></li>
               <li><a href="index.php?act=napthe">Nạp thẻ</a></li>
               <li><a href="index.php?act=donhang">Đơn hàng</a></li>
+              <li><a href="../index.php">Trang người dùng</a></li>
 
 
                 </ul>

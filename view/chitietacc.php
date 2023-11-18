@@ -37,7 +37,7 @@
 			<div class="col-md-6 tt-info-acc">
 				<div class="tt-acc">
 					<div class="col-xs-6">Phái: <span class="red"><?php echo $class?></span></div>
-					<div class="col-xs-6">Server: <span class="red">Bokken</span></div>
+					<div class="col-xs-6">Server: <span class="red"><?php echo $namedm ?></span></div>
 					<div class="col-xs-6">Cấp độ: <span class="red"><?php echo $lv?></span></div>
 					<div class="col-xs-6" title="Sau khi mua nick bạn sẽ được up miễn phí nếu muốn">Up Free: <span class="red">10 ngày</span></div>
 				</div>

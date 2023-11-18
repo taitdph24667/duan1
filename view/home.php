@@ -36,7 +36,7 @@
             <div class="install" title="Lưu vào màn hình chính">Send to desktop</div>
         </div>
 
-        <h3 class="list-game">TOP ACC</h3>
+        <h3 class="list-game">SHOP ACC</h3>
         <div id="xem-acc" class="line-center"></div>
         <div id="acc">
 
@@ -78,12 +78,12 @@
                             <div><b>'.$name.'</b></div>
                         </div>
                         <div class="col-xs-4">
-                            <div>Danh Mục</div>
+                            <div>Sever</div>
                             <div><b>'.$namedm.'</b></div>
                         </div>
                         <div class="col-xs-4">
                             <div>Level</div>
-                            <div><b>93</b></div>
+                            <div><b>'.$lv.'</b></div>
                         </div>
                         <div class="clear"></div>
                         <div class="info-nso" title="'.$mota.'">'.$mota.'</div>
