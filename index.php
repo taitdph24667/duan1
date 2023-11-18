@@ -58,14 +58,14 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
                 if (isset($_POST['dangnhap'])) {
                     $loginMess = dangnhap($_POST['user'], $_POST['pass']);
                       
-                    
+                    include "index.php";
                 }
                 break;
                 
               
                 case "dangxuat":
                     dangxuat();
-                    include "view/home.php";
+                    include "view/login.php";
                     break;
          
           
