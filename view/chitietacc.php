@@ -9,7 +9,7 @@
 			<div class="header-acc">
 				<div class="col-md-6">
 					<p class="red">Mã Số <?php echo $id?></p>
-					<p class="red"> <?php echo $name?></p>
+					<h1>tên Nick game:</h1><p class="red"> <?php echo $name?></p>
 				</div>
 				<div class="col-md-6">
 					<div class="amount-acc">
@@ -36,64 +36,28 @@
 			</div>
 			<div class="col-md-6 tt-info-acc">
 				<div class="tt-acc">
-					<div class="col-xs-6">Phái: <span class="red">Cung</span></div>
+					<div class="col-xs-6">Phái: <span class="red"><?php echo $class?></span></div>
 					<div class="col-xs-6">Server: <span class="red">Bokken</span></div>
-					<div class="col-xs-6">Cấp độ: <span class="red">93</span></div>
+					<div class="col-xs-6">Cấp độ: <span class="red"><?php echo $lv?></span></div>
 					<div class="col-xs-6" title="Sau khi mua nick bạn sẽ được up miễn phí nếu muốn">Up Free: <span class="red">10 ngày</span></div>
 				</div>
 				<div class="hidden-xs">
-					<div class="col-xs-6">Trạng thái: <i class="red">Chưa bán</i></div>
-					<div class="col-xs-6">Ngày đăng: <i class="red">03-08-2023</i></div>
+				
+					<div class="col-xs-6">Ngày đăng: <i class="red"><?php echo $ngaydang?></i></div>
 				</div>
 				<div class="hr-acc"><i class="icon-dot"></i></div>
 				<div class="tt-acc-full">
 					<div class="con">
 						Thông tin thêm: <span class="red" style="text-transform:none"><?php echo $mota?></span>
-						<div style="padding-top:10px"><h2>Giá:<span class="red"><?php echo $price?> đ</div>	</div></span> </h2> 
+						<div style="padding-top:10px"><h2>Giá:<span class="red"><?php echo number_format($price,0,"",".");?> VNĐ</div>	</div></span> </h2> 
 				</div>
 				<div class="visible-xs">
-					<div class="col-xs-6"><b>Trạng thái:</b> <i class="red">Chưa&nbsp;bán</i></div>
+			
 					<div class="col-xs-6"><b>Ngày đăng:</b> <i class="red" style="white-space:nowrap">03-08-2023</i></div>
 				</div>
 				<div class="hr-acc"><i class="icon-dot"></i></div>
 				<div>
-					<div class="price-detail">
-						<span>Giá chi tiết:</span>
-						<ul>
-							<li class="active"><a href="#auto" data-toggle="tab">Nạp tự động</a></li>
-							<li><a href="#slow" data-toggle="tab">Nạp chậm</a></li>
-						</ul>
-						<div class="tab-content">
-							<div role="tabpanel" class="tab-pane active" id="auto">
-								<div class="table-responsive">
-									<table class="table">
-										<thead>
-											<tr>
-												<th width="12.5%">Viettel</th><th width="12.5%">Vina</th><th width="12.5%">Vnmb</th><th width="12.5%">Zing</th><th width="12.5%">Mobi</th><th width="12.5%">Gate</th><th width="12.5%">Vcoin</th><th width="12.5%">Garena</th>											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>420.000</td><td>410.000</td><td>420.000</td><td>420.000</td><td>440.000</td><td>480.000</td><td>440.000</td><td>420.000</td>											</tr>				
-										</tbody>
-									</table>
-								</div>
-							</div>
-							<div role="tabpanel" id="slow" class="tab-pane">
-								<div class="table-responsive">
-									<table class="table">
-										<thead>
-											<tr>
-												<th width="100%">Vcoin</th>											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>420.000</td>											</tr>				
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
