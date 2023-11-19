@@ -9,7 +9,7 @@
             </div>
             <div class="clear"></div>
         </div>
-        <h3 class="list-game">DANH MỤC GAME</h3>
+        <h3 class="list-game">DANH MỤC SEVER</h3>
         <div id="xem-acc" class="line-center"></div>
         <div class="acc-title">
         <a href='index.php?act=trangchu'><div id='nso-title' class='type-acc active'>
