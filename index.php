@@ -5,7 +5,7 @@ include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/accgame.php";
 include "model/napthe.php";
-
+include "global.php";
 //  đã thay đổi
 // test part 2
 
