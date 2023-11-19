@@ -4,10 +4,14 @@
     
 
     //dang ky
-    function insert_taikhoan($email,$user,$pass){
-        $sql="INSERT INTO `taikhoan` ( `email`, `user`, `pass`) VALUES ( '$email', '$user','$pass'); ";
+    function insert_taikhoan($user,$pass,$email){
+        $sql="INSERT INTO `taikhoan` (`user`, `pass`, `email`) VALUES ('$user','$pass','$email') ";
+    
         pdo_execute($sql);
+      
+        
     }
+
 
     function checkuser($user,$pass) {
         $sql="SELECT * FROM taikhoan WHERE user='$user' and pass='$pass'";

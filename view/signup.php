@@ -2,20 +2,26 @@
 <link rel="stylesheet" href="account/style3.css">
 <div class="account-box">
     <div class="wrapper">
-      <div class="title">ĐĂNG KÝ</div>
-      <form>
+      <div class="title">ĐĂNG KÝ</div> 
+      <form method="post">
+      <center><?php
+  if(isset($thongbao)&&$thongbao != ""){
+    echo $thongbao;
+  }
+?></center>
+      <form action="index.php?act=dangky" method="post">
         <div id="content"></div>
         <div class="field">
-          <input type="number" id="" name="phone" required>
+          <input type="text" id="" name="user" required>
           <label>Tên tài khoản</label>
         </div>
         <div id="sign-in-button"></div>
         <div class="field">
-          <input type="text" id="" name="code" required>
+          <input type="password" id="" name="pass" required>
           <label>Mật khẩu</label>
         </div>
         <div class="field">
-          <input type="text" id="" name="code" required>
+          <input type="email" id="" name="email" required>
           <label>Gmail</label>
         </div>
         <div class="content">
@@ -27,8 +33,14 @@
         </div>
         <input type="hidden" id="confirm" name="confirm">
         <div class="field">
-          <input type="submit" id="submit" value="Đăng ký">
+          <input type="submit" id="submit" value="Đăng ký" name="test">
+          
+
+          
         </div>
+      
+</form>
+
         <div class="signin">----------- Hoặc -----------</div>
         <div class="signin">
             <a href="index.php?act=dangnhap" class="btn btn-lg btn-primary"></i> Đăng nhập </a>
@@ -39,10 +51,7 @@
       </form>
     </div>
 </div>
-<script src="../www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-<script src="../www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-<script src="../apis.google.com/js/platformd1c1.js?onload=renderButton" async defer></script>
-<script src="account/login.js"></script>
+
 </div>
-<div id="modal"></div>
-<div class="modal fade" id="modal-getNotify" role="dialog"></div>
+
+

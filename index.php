@@ -5,7 +5,7 @@ include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/accgame.php";
 include "model/napthe.php";
-
+include "global.php";
 //  đã thay đổi
 // test part 2
 
@@ -17,9 +17,9 @@ if(isset($_GET['act'])&&($_GET['act']!="")){
         case "trangchu":
 $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
 
-          $listaccgame= loadAll_accgame('',$locdm);
+    $listaccgame= loadAll_accgame('',$locdm);
       $listdanhmuc=loadall_danhmuc();
-    
+      
 
             include "view/home.php";
      
@@ -70,11 +70,21 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
          
           
 
-            case "dangky":
-          
-                include "view/signup.php";
-         
-            break;
+                    case "dangky":
+                        if (isset($_POST['test'])) {
+                          
+                            $name = $_POST['user'];
+                            $pass= $_POST['pass'];
+                            $email = $_POST['email'];
+                            insert_taikhoan( $name,$pass,$email);
+                            $thongbao = "Đăng kí thành công";
+        
+                        }
+                      
+                        include "view/signup.php";
+                        
+                 
+                    break;
 
 
     //    include "view/home.php";

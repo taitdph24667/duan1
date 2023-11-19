@@ -40,8 +40,8 @@
             } ?> <?php } else { ?>
             <h1>BẠN ĐÃ ĐĂNG NHẬP THÀNH CÔNG</h1>
               <p>Xin Chào <?=$_SESSION['user']['user']?></p>
-              <ul>                
-              <li><button><a href="index.php?act=trangchu">quay lại trang chủ</a></button>
+              <ul type="none">                
+              <li><button><a href="index.php?act=trangchu">Quay lại trang chủ</a></button>
 
               <li><button><a href="index.php?act=edit_taikhoan">Cập nhập tài khoản</a></button>
   

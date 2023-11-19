@@ -81,18 +81,19 @@
                         <li>
                         	<a href="index.php?act=dangky" class="c-btn btn c-btn-uppercase"><i class="fas fa-key"></i> ĐĂNG KÝ</a>
                         </li>
-                        <?php } else { ?>
+                        <?php } else { 
+                            $money = $_SESSION['user']['money'];
+                            $formattedMoney = number_format($money, 0, '.', ',');
+                            ?>
                             <li>
-                            <a href="index.php?act=dangnhap" class="c-btn btn c-btn-uppercase"><i class="fas fa-user-ninja"></i> <?=$_SESSION['user']['user']?></a>
+                            <a href="index.php?act=dangnhap" class="c-btn btn c-btn-uppercase"><i class="fas fa-user-ninja"></i> <?=$_SESSION['user']['user']?>-ID<?=$_SESSION['user']['id']?>-<?php echo $formattedMoney?>VNĐ</a>
                         </li>
                         <li>
                         	<a href="index.php?act=dangxuat" class="c-btn btn c-btn-uppercase"><i class="fas fa-key"></i> Đăng xuất</a>
                         </li>
              
             <?php if( $_SESSION['user']['role'] ==1 ){ ?>
-                <li>
-                <a href="quantri/index.php" class="c-btn btn c-btn-uppercase"><i class="fas fa-key"></i> Đăng nhập admin</a>
-                </li>
+                
                 <?php } ?>
          
 </li>
