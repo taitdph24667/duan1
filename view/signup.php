@@ -6,16 +6,16 @@
       <form>
         <div id="content"></div>
         <div class="field">
-          <input type="number" id="phone" name="phone" required>
+          <input type="number" id="" name="phone" required>
           <label>Tên tài khoản</label>
         </div>
         <div id="sign-in-button"></div>
         <div class="field">
-          <input type="text" id="code" name="code" required>
+          <input type="text" id="" name="code" required>
           <label>Mật khẩu</label>
         </div>
         <div class="field">
-          <input type="text" id="code" name="code" required>
+          <input type="text" id="" name="code" required>
           <label>Gmail</label>
         </div>
         <div class="content">
