@@ -4,9 +4,12 @@
     
 
     //dang ky
-    function insert_taikhoan($email,$user,$pass){
-        $sql="INSERT INTO `taikhoan` ( `email`, `user`, `pass`) VALUES ( '$email', '$user','$pass'); ";
+    function insert_taikhoan($user,$pass,$email){
+        $sql="INSERT INTO `taikhoan` (`user`, `pass`, `email`) VALUES ('$user','$pass','$email') ";
+    
         pdo_execute($sql);
+      
+        
     }
 
     function checkuser($user,$pass) {
@@ -32,19 +35,7 @@
             unset($_SESSION['user']);
         }
     }
-    function delete_binhluan($id){
-        
-        $sql="DELETE FROM `binhluan` WHERE id= ".$id ;
-        pdo_execute($sql);
-    }
-    function update_binhluan($id,$noidung,$iduser,$idpro,$ngaybinhluan){
-
-        $sql="UPDATE `binhluan` SET `noidung` = '$noidung',`iduser` = '$iduser', `idpro` = '$idpro',`ngaybinhluan` = '$ngaybinhluan' WHERE `binhluan`.`id` = $id";
-   //   echo $sql;
-   //   die;
-        pdo_execute($sql);
     
-    }
 
     function delete_taikhoan($id){
         $sql="update taikhoan set isdelete= 1 where id= ".$id ;

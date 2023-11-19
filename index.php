@@ -5,6 +5,7 @@ include "model/taikhoan.php";
 include "model/danhmuc.php";
 include "model/accgame.php";
 include "model/napthe.php";
+include "global.php";
 
 //  đã thay đổi
 // test part 2
@@ -53,11 +54,13 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
          
             break;
 
+
+
+
             case "dangnhap": 
              include "view/login.php";
                 if (isset($_POST['dangnhap'])) {
-                    $loginMess = dangnhap($_POST['user'], $_POST['pass']);
-                      
+                      echo $loginMess;
                     include "index.php";
                 }
                 break;
@@ -71,8 +74,18 @@ $locdm=!empty($_GET['dm'])?$_GET['dm']:"";
           
 
             case "dangky":
-          
+                if (isset($_POST['test'])) {
+                  
+                    $name = $_POST['user'];
+                    $pass= $_POST['pass'];
+                    $email = $_POST['email'];
+                    insert_taikhoan( $name,$pass,$email);
+                    $thongbao = "Đăng kí thành công";
+
+                }
+              
                 include "view/signup.php";
+                
          
             break;
 
