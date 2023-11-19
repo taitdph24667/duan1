@@ -36,19 +36,7 @@
             unset($_SESSION['user']);
         }
     }
-    function delete_binhluan($id){
-        
-        $sql="DELETE FROM `binhluan` WHERE id= ".$id ;
-        pdo_execute($sql);
-    }
-    function update_binhluan($id,$noidung,$iduser,$idpro,$ngaybinhluan){
-
-        $sql="UPDATE `binhluan` SET `noidung` = '$noidung',`iduser` = '$iduser', `idpro` = '$idpro',`ngaybinhluan` = '$ngaybinhluan' WHERE `binhluan`.`id` = $id";
-   //   echo $sql;
-   //   die;
-        pdo_execute($sql);
     
-    }
 
     function delete_taikhoan($id){
         $sql="update taikhoan set isdelete= 1 where id= ".$id ;
